@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Travel</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+<!-- 新增套票區 -->
+<section class="ticket-box text-primary">
+    <div class="ticket-img">
+        <img src="img/undraw_Traveling_re_weve.png" alt="Travelpeople">
+        <img src="img/Let’s Travel !.png" alt="Let's Travel">
+    </div>
+    <div class="ticket-add">
+        <h1><i class="fas fa-plus-circle"></i>新增旅遊套票</h1>
+        <form action="index.html">
+            <div class="input-group">
+                <label for="name">套票名稱</label>
+                <input type="text" id="name" placeholder="請填寫套票名稱">
+            </div>
+            <div class="input-group">
+                <label for="imgUrl">圖片網址</label>
+                <input type="text" id="imgUrl" placeholder="請填寫圖片網址">
+            </div>
+            <div class="input-group">
+                <label for="areaplace">景點地區</label>
+                <select name="景點地區" id="areaplace" >
+                    <option value="" disabled selected>請選擇景點地區</option>
+                    <option value="台北">台北</option>
+                    <option value="台中">台中</option>
+                    <option value="高雄">高雄</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="price">套票金額</label>
+                <input type="number" id="price" placeholder="請填寫套票金額">
+            </div>
+            <div class="input-group">
+                <label for="group">套票組數</label>
+                <input type="number" id="group" placeholder="請填寫套票組數">
+            </div>
+            <div class="input-group">
+                <label for="level">套票星級</label>
+                <input type="number" id="level" placeholder="請填寫套票星級">
+            </div>
+            <div class="input-group">
+                <label for="des">套票描述</label>
+                <textarea name="套票描述" id="des" placeholder="請填寫套票描述（限 100 字）"></textarea>
+            </div>
+            <div class="btn">
+                <input type="button" value="新增套票" class="add-btn">
+            </div>
+        </form>
+    </div>
+</section>
+<!-- 地區景點 -->
+<section class="area-box bg-gray">
+    <div class="container">
+        <div class="area-header">
+            <select name="地區搜尋" id="local">
+                <option value="地區搜尋" disabled selected>地區搜尋</option>
+                <option value="全部">全部</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="高雄">高雄</option>
+            </select>
+            <p class="search-num"></p>
+        </div>
+        <ul class="area-list">
+            <!-- <li class="area-card">
+                <div class="card-header">
+                    <div class="card-img">
+                        <img src="img/a.png" alt="place">
+                    </div>
+                    <h4 class="local-title">台北</h4>
+                    <p class="local-level">8.6</p>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3 class="area-name">綠島自由行套裝行程</h3>
+                        <p class="area-des">嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="last-group"><i class="fas fa-exclamation-circle"></i>剩下最後 8 組</p>
+                        <h4 class="price"><sup>TWD</sup>$1,280</h4>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+</section>
+
+<script src="https://kit.fontawesome.com/171768a726.js" crossorigin="anonymous"></script>
+<script src="js/all.js"></script>
+</body>
+</html>

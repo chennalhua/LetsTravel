@@ -1,0 +1,30 @@
+$primary: #00807E;
+$secondary: #32334b;
+$light-primary: #64C3BF;
+$gray:#F7F7F7;
+
+.text-primary{
+  color: $primary;
+}
+
+.bg-gray{
+  background-color:  $gray
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family:'Roboto';
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+    display:block;
+}
+
+p{
+    text-align: justify;
+}

@@ -1,0 +1,238 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.container{
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+sup{
+	vertical-align: super;
+}
+
+
+// ticket-box
+.ticket-box{
+	width:920px;
+	margin: 60px auto;
+	display: flex;
+	box-shadow: 0 3px 6px rgba(0, 0, 0,.3);
+	padding:60px 95px;
+	@include pc-sm{
+		width:100%;
+		padding:60px 50px;
+		margin:0;
+		box-shadow:none;
+	}
+	@include pad{
+		display:block;
+		padding:20px 50px 30px 50px;
+	}
+	.ticket-img{
+		width: 40%;
+		@include pad{
+			width: 100%;
+			display: flex;
+			margin-bottom: 20px;
+			img{
+				width: 50%;
+			}
+		}
+	}
+	.ticket-add{
+		width:60%;
+		@include pad{
+			width: 100%;
+		}
+		h1{
+			font-size:24px;
+			border-bottom: 3px solid $primary;
+			margin-bottom: 36px;
+			padding-bottom:6px;
+			i{
+				margin-right: 6px;
+			}
+		}
+		.input-group{
+			margin-bottom:16px;
+			display:flex;
+			align-items: center;
+			label{
+				width:30%;
+				@include pad{
+					width: 20%;
+				}
+			}
+			input,select,textarea{
+				width:70%;
+				font-size:16px;
+				background:$gray;
+				border: 0;
+				border-bottom:2px solid $primary;padding:8px 12px;
+				@include pad{
+					width: 80%;
+				}
+			}
+			textarea{
+				height:120px;
+			}
+		}
+		.btn{
+			text-align:right;
+			@include pad{
+				text-align:center;
+			}
+		}
+		.add-btn{
+			background:$primary;
+			color:white;
+			border:0;
+			border-radius:3px;
+			padding:10px 40px;
+			font-size:20px;
+			cursor: pointer;
+			outline: none;
+			transition: all 0.3s;
+			&:hover{
+				background:$secondary;
+			}
+		}
+	}
+}
+
+//area-box
+.area-box{
+	padding: 50px;
+}
+.area-header{
+	margin-bottom:20px;
+	display: flex;
+	align-items: center;
+	@include pad{
+		display: block;
+	}
+	select{
+		width:255px;
+		padding:8px 12px;
+		margin:0 20px 0 89px;
+		font-size:16px;
+		color: gray;
+		border:1px solid gray;
+		border-radius: 5px;
+		@include pad{
+			width:100%;
+			margin:0;
+			margin-bottom:20px;
+		}
+	}
+	.search-num{
+		color: gray;
+		@include pad{
+			text-align: center;
+		}
+	}
+}
+
+.area-list{
+	display:flex;
+	flex-wrap: wrap;
+	.area-card{
+		width:29.5%;
+		box-shadow:0 3px 6px rgba(0, 0, 0,.3);
+		margin:15px;
+		@include pc-sm{
+			width:45%;
+		}
+		@include pad{
+			width:100%;
+		}
+		.card-img{
+			overflow: hidden;
+			height:200px;
+			img{
+				width:100%;
+				transition: all 0.3s;
+				&:hover{
+					transform:scale(1.2);
+				}
+			}
+		}
+		
+	}
+	.card-header{
+		position: relative;
+		.local-title,.local-level{
+			color: white;
+			display: inline-block;
+			border-top-right-radius:3px;
+			border-bottom-right-radius:3px;
+			position: absolute;
+		}
+		.local-title{
+			background:$light-primary;
+			padding:8px 20px;
+			top: -10px;
+			font-size:20px;
+		}
+		.local-level{
+			background:$primary;
+			padding:8px 5px;
+			bottom: -10px;
+		}
+	}
+	.card-body{
+		padding:20px;
+  		height: calc(100% - 190px);
+  		display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+		.area-name,.card-footer{
+			color:$primary;
+		}
+		.area-name{
+			font-size:24px;
+			border-bottom: 3px solid $primary;
+			padding-bottom: 4px;
+			margin-bottom: 16px;
+		}
+		.area-des{
+			line-height: 24px;
+			color:gray;
+		}
+		.card-footer{
+			padding:20px 0 15px 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include pc{
+				flex-direction: column;
+				align-self: flex-end;
+				padding-bottom: 0;
+			}
+			@include pc-sm{
+				flex-direction: row;
+				align-self:stretch;
+			}
+			@include phone{
+				flex-direction: column;
+				align-self: flex-end;
+			}
+			.price{
+				font-size: 30px;
+				font-weight: bold;
+				@include pc{
+					padding: 10px;
+				}
+				@include pc-sm{
+					font-size:25px;
+				}
+			}
+			sup{
+				font-size:16px;
+			}
+		}
+	}
+}
