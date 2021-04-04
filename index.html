@@ -36,7 +36,7 @@
             </div>
             <div class="input-group">
                 <label for="price">套票金額</label>
-                <input type="number" id="price" placeholder="請填寫套票金額">
+                <input type="number" id="price" placeholder="請填寫套票金額" class="price">
             </div>
             <div class="input-group">
                 <label for="group">套票組數</label>
@@ -44,7 +44,8 @@
             </div>
             <div class="input-group">
                 <label for="level">套票星級</label>
-                <input type="number" id="level" placeholder="請填寫套票星級">
+                <!-- 新增星級 1 ~ 10 區間 -->
+                <input type="number" id="level" placeholder="請填寫套票星級" min="1" max="10">
             </div>
             <div class="input-group">
                 <label for="des">套票描述</label>
@@ -93,6 +94,8 @@
     </div>
 </section>
 
+<!-- axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://kit.fontawesome.com/171768a726.js" crossorigin="anonymous"></script>
 <script src="js/all.js"></script>
 </body>

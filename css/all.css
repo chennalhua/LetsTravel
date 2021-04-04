@@ -79,8 +79,8 @@ p {
   text-align: justify;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.price::-webkit-outer-spin-button,
+.price::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
