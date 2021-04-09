@@ -111,18 +111,30 @@ sup{
 	margin-bottom:20px;
 	display: flex;
 	align-items: center;
-	@include pad{
-		display: block;
+	justify-content: space-around;
+	@include pc-sm{
+		flex-direction:column;
+
+	}
+	.select-box{
+		width: 60%;
+		display: flex;
+		align-items: center;
+		@include pc-sm{
+			flex-direction:column;
+			margin-bottom:20px;
+	
+		}
 	}
 	select{
-		width:255px;
+		width:40%;
 		padding:8px 12px;
 		margin:0 20px 0 89px;
 		font-size:16px;
 		color: gray;
 		border:1px solid gray;
 		border-radius: 5px;
-		@include pad{
+		@include pc-sm{
 			width:100%;
 			margin:0;
 			margin-bottom:20px;
@@ -234,5 +246,12 @@ sup{
 				font-size:16px;
 			}
 		}
+	}
+}
+
+#chart{
+	width: 40%;
+	@include pc-sm{
+		width: 70%;
 	}
 }

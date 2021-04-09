@@ -238,16 +238,41 @@ sup {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .area-header {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.area-header .select-box {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 992px) {
+  .area-header .select-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
   }
 }
 
 .area-header select {
-  width: 255px;
+  width: 40%;
   padding: 8px 12px;
   margin: 0 20px 0 89px;
   font-size: 16px;
@@ -256,7 +281,7 @@ sup {
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .area-header select {
     width: 100%;
     margin: 0;
@@ -440,5 +465,15 @@ sup {
 
 .area-list .card-body .card-footer sup {
   font-size: 16px;
+}
+
+#chart {
+  width: 40%;
+}
+
+@media (max-width: 992px) {
+  #chart {
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=all.css.map */

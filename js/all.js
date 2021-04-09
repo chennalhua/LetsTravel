@@ -16,6 +16,7 @@ axios.get('https://raw.githubusercontent.com/hexschool/js-training/main/travelAp
   .then(function (response) {
     console.log('資料已回傳');
     data = response.data.data;
+    renderC3();
     init();
   });
 
@@ -42,6 +43,7 @@ function init(){
   searchNum.textContent =`本次搜尋共 ${data.length} 筆資料`;
 }
 
+//list content
 function listContentBox(){
   let str = '';
   data.forEach(function(item){
@@ -128,6 +130,54 @@ function addTicketBox(){
     })
     form.reset();//清除表單內容
     init();
+    filterLocal.value = '全部'; //如果下方使用者有篩選地區，當新增跳套票時，會跳回「全部」選項
+    renderC3();
   })
 }
 addTicketBox();
+
+//c3 圖表
+function renderC3(){
+  let totalObj = {};
+  //{高雄: 1, 台北: 1, 台中: 1}
+  data.forEach(function(item){
+    if(totalObj[item.area] == undefined){
+      totalObj[item.area] = 1;
+    }else {
+      totalObj[item.area] += 1;
+    }
+  });
+  let newData = [];
+  let area = Object.keys(totalObj);
+  //area = ["高雄", "台北", "台中"];
+  area.forEach(function(item){
+    let ary = [];
+    ary.push(item);
+    ary.push(totalObj[item]);
+    newData.push(ary);
+  });
+  
+  const chart = c3.generate({
+    data: {
+        columns: newData,
+        type : 'donut',
+        colors:{
+          高雄:"#E68619",
+          台北:"#26C0C7",
+          台中:"#5151D3",
+        }
+    },
+    size:{
+      height:200
+    },
+    donut: {
+        title: "套票地區比重",
+        width:15,
+        label:{
+          show:false
+        }
+    }
+  });
+}
+
+
